@@ -1,4 +1,6 @@
-add a new player
-Wash
-Throw
+Gym
+Relax
 Cook
+Eat
+Relax
+Clean
