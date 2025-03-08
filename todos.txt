@@ -1,6 +1,4 @@
-Gym
-Relax
 Cook
-Eat
-Relax
 Clean
+Eat
+Sleep
