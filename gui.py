@@ -1,6 +1,11 @@
 import functions
 import FreeSimpleGUI as sg
 import time
+import os
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", 'w') as file:
+        pass
 
 sg.theme("DarkBlue2")
 
@@ -33,11 +38,14 @@ while True:
         match event:
             case "Add":
                 todos = functions.get_todos()
-                new_todo = values['todo'] + "\n"
-                todos.append(new_todo)
-                functions.write_todos(todos)
-                window['todos'].update(values=todos)
-                window['todo'].update(value="")
+                if values["todo"] != "":
+                    new_todo = values['todo']
+                    todos.append(new_todo + "\n")
+                    functions.write_todos(todos)
+                    window['todos'].update(values=todos)
+                    window['todo'].update(value="")
+                else:
+                    sg.popup("You did not enter any to-do")
 
             case "Edit":
                 try:

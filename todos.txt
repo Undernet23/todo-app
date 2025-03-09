@@ -1,4 +1,3 @@
-Cook
-Clean
 Eat
-Sleep
+Run
+Eat
