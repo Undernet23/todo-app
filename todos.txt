@@ -1,3 +1,5 @@
 Eat
 Run
 Eat
+CleanCook
+Run
